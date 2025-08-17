@@ -1,0 +1,87 @@
+[gd_scene load_steps=13 format=3 uid="uid://qss54qu8n7wy"]
+
+[ext_resource type="Script" uid="uid://cnk4s6djtp07k" path="res://scenes/character_body_2d.gd" id="1_xw35t"]
+[ext_resource type="Texture2D" uid="uid://upon6xf8drpu" path="res://sprites/personagem/WarriorMan-Sheet.png" id="2_pm1wa"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vnytd"]
+atlas = ExtResource("2_pm1wa")
+region = Rect2(0, 0, 80, 61)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e6vnd"]
+atlas = ExtResource("2_pm1wa")
+region = Rect2(80, 0, 80, 61)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2jrhv"]
+atlas = ExtResource("2_pm1wa")
+region = Rect2(160, 0, 80, 61)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g6hv0"]
+atlas = ExtResource("2_pm1wa")
+region = Rect2(240, 0, 80, 61)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y4lqn"]
+atlas = ExtResource("2_pm1wa")
+region = Rect2(320, 0, 80, 61)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wf7jv"]
+atlas = ExtResource("2_pm1wa")
+region = Rect2(400, 0, 80, 61)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lbjxv"]
+atlas = ExtResource("2_pm1wa")
+region = Rect2(480, 0, 80, 61)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_np3xf"]
+atlas = ExtResource("2_pm1wa")
+region = Rect2(560, 0, 80, 61)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_oo8bi"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vnytd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e6vnd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2jrhv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g6hv0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y4lqn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wf7jv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lbjxv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_np3xf")
+}],
+"loop": true,
+"name": &"default",
+"speed": 4.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o5ntp"]
+size = Vector2(25, 35)
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_xw35t")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-5.72205e-06, 0)
+scale = Vector2(1.45417, 1.43033)
+sprite_frames = SubResource("SpriteFrames_oo8bi")
+autoplay = "default"
+frame_progress = 0.947763
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(4, 6)
+shape = SubResource("RectangleShape2D_o5ntp")
+
+[node name="Camera2D" type="Camera2D" parent="."]
