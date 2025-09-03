@@ -1,0 +1,11 @@
+# REGRAS
+# DATA DA ENTREGA 05/09/2025 as 23:59:59 H MS
+Projeto no github e enviar para o meu email o link do repositorio.
+Nome do Repositorio: AT1_seunome_JogosDigitais
+# REQUISITOS
+-Cenario do jogo de plataforma, (" chão, paredes, plataformas")
+  Tamanho 2000px em Horizontal
+-1 Personagem com mecanicas basicas de movimento e colisões
+-1 NPC
+-1 Tile Set de chão feito por você [3x3]
+-Camera seguindo o personagem.
